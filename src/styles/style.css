@@ -1,0 +1,292 @@
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes home-btn {
+  from {
+    transform: translateY(-400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes home-heading-keyframe {
+  from {
+    transform: translateY(-400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes profile-heading {
+  from {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#profile-animation {
+  animation-name: profile-heading;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+
+}
+
+.home-heading {
+  animation-name: home-heading-keyframe;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.searchBtn {
+  animation-name: home-btn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  /* animation-fill-mode: forwards; */
+
+}
+
+.card {
+  animation: slide-up 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+/* Add more nth-child selectors as needed for additional cards */
+
+#profile-btn-setting {
+  position: relative;
+  width: max-content;
+
+}
+
+/* center animation for underline */
+#profile-btn-setting::after {
+  content: "";
+  background-color: #145af3;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 2px;
+  left: 10px;
+  transform: scale(0);
+  transition: transform 0.3s ease-in;
+
+
+}
+
+#profile-btn-setting:hover::after {
+  transform: scale(1);
+
+}
+
+#profile-btn-profile {
+  position: relative;
+  width: max-content;
+
+}
+
+#profile-btn-profile::after {
+  content: "";
+  background-color: #145af3;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 2px;
+  left: 10px;
+  transform: scale(0);
+
+
+
+}
+
+#profile-btn-profile:hover::after {
+  transform: scale(1);
+
+  transform-origin: 0% 100%;
+  transition: transform 0.3s ease-in;
+
+}
+
+#nav-btn-animation {
+  position: relative;
+  width: max-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+#nav-btn-animation::after {
+  content: "";
+  background-color: #145af3;
+  width: 110%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease-in;
+}
+
+#nav-btn-animation:hover::after {
+
+  transform: scale(1);
+  transform-origin: 0% 100%;
+
+}
+
+#job-search-btn {
+  position: relative;
+  width: max-content;
+}
+
+#job-search-btn::after {
+  content: "";
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-color: #145af3;
+  /* color: #145af3; */
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  top: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease-in;
+}
+
+#job-search-btn:hover::after {
+  transform: scale(1);
+
+}
+
+
+
+
+
+/* .JobButton:hover+.JobOptionsMenu {
+  display: flex;
+} */
+.JobContainer:hover .JobOptionsMenu {
+  display: flex;
+
+}
+
+.searchByCategoriesDropdown {
+  display: none;
+}
+
+.searchByCategories:hover .searchByCategoriesDropdown {
+  display: flex;
+}
+
+.searchByNestLinksDropdown {
+  display: none;
+}
+
+.searchByCategoriesLinksDropdown:hover .searchByNestLinksDropdown {
+  display: flex;
+}
+
+
+@keyframes studentSidebarAnimation {
+  from {
+    transform: translateX(-300px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes studentSidebarAnimationClose {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-300px);
+    opacity: 1;
+  }
+}
+
+#student-sidebar .open {
+  animation-name: studentSidebarAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+#student-sidebar .close {
+
+  animation-name: studentSidebarAnimationClose;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+
+/* Add this to your CSS file */
+/* .open {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.close {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+} */
