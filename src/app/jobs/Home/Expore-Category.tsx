@@ -108,7 +108,7 @@ const ExploreCategory: React.FC = () => {
                 </h2>
             </div>
 
-            <div className="grid grid-cols-4 gap-5 my-5 mx items-center m-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 my-5 mx items-center m-5">
                 {categories.map((category, index) => (
                     <div
                         key={index}

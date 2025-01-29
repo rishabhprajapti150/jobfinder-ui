@@ -1,4 +1,6 @@
+import { LinkButton } from '@/components/CommonComponents';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface CompanyCardProps {
     headerImage: string;
@@ -8,6 +10,7 @@ interface CompanyCardProps {
     headerImageHeight?: number;
     logoWidth?: number;
     logoHeight?: number;
+    link: string
 }
 
 const CompanyCard: React.FC<CompanyCardProps> = ({
@@ -18,24 +21,28 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
     headerImageHeight = 150,
     logoWidth = 80,
     logoHeight = 80,
+    link
 }) => {
     return (
-        <div className="bg-white shadow-md p-3">
-            <Image
-                src={headerImage}
-                width={headerImageWidth}
-                height={headerImageHeight}
-                className="object-fill w-full h-[200px]"
-                alt={`${companyName} header`}
-            />
-            <div className="flex items-center justify-center mt-4">
+
+        <div className="bg-white shadow-md p-3 cursor-pointer">
+            <Link href={link}>
                 <Image
-                    src={logoImage}
-                    width={logoWidth}
-                    height={logoHeight}
-                    alt={`${companyName} logo`}
+                    src={headerImage}
+                    width={headerImageWidth}
+                    height={headerImageHeight}
+                    className="object-fill w-full h-[200px]"
+                    alt={`${companyName} header`}
                 />
-            </div>
+                <div className="flex items-center justify-center mt-4">
+                    <Image
+                        src={logoImage}
+                        width={logoWidth}
+                        height={logoHeight}
+                        alt={`${companyName} logo`}
+                    />
+                </div>
+            </Link>
         </div>
     );
 };
@@ -102,26 +109,31 @@ const CoolPlacesToWork = () => {
             headerImage: '/company-image/infosys-head.jpg',
             logoImage: '/company-image/company-logo/infosys.png',
             companyName: 'Infosys',
+            url: "https://recruiter.shine.com/micro-site/infosys-jobs"
         },
         {
             headerImage: '/company-image/capgemini-head.jpg',
             logoImage: '/company-image/company-logo/capgemini.jpg',
             companyName: 'Capgemini',
+            url: "https://recruiter.shine.com/micro-site/capgemini-technology-services-india-limited-jobs"
         },
         {
             headerImage: '/company-image/sbi-headq.jpg',
             logoImage: '/company-image/company-logo/SBI.png',
             companyName: 'SBI',
+            url: "https://sbi.co.in/web/careers/Current-openings"
         },
         {
             headerImage: '/company-image/amazone-head.png',
             logoImage: '/company-image/company-logo/amazone.png',
             companyName: 'Amazon',
+            url: "https://www.amazon.jobs/content/en/job-categories"
         },
         {
             headerImage: '/company-image/tsc-head.jpg',
             logoImage: '/company-image/company-logo/tcs.webp',
             companyName: 'TSC',
+            url: "https://www.tcs.com/careers"
         },
     ];
 
@@ -138,6 +150,7 @@ const CoolPlacesToWork = () => {
                             headerImage={company.headerImage}
                             logoImage={company.logoImage}
                             companyName={company.companyName}
+                            link={company.url}
                         />
                     ))}
                 </div>
