@@ -290,3 +290,118 @@
   transform: translateX(-100%);
   transition: opacity 0.3s ease, transform 0.3s ease;
 } */
+
+@keyframes remoteJobAnimationNext {
+  from {
+    transform: translateX(500px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.job-slider-animation-next {
+  animation-name: remoteJobAnimationNext;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes remoteJobAnimationPrev {
+  from {
+    transform: translateX(-500px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.job-slider-animation-prev {
+  animation-name: remoteJobAnimationPrev;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes walkinJobAnimationNext {
+  from {
+    transform: translateX(500px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.walkin-slider-animation-next {
+  animation-name: walkinJobAnimationNext;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes walkinJobAnimationPrev {
+  from {
+    transform: translateX(-500px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.walkin-slider-animation-prev {
+  animation-name: walkinJobAnimationPrev;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+
+#job-Detail-btn-hover {
+  position: relative;
+  width: max-content;
+  padding-top: 4px;
+  padding-bottom: 1px;
+}
+
+#job-Detail-btn-hover::before {
+  content: "";
+  background-color: #145af3;
+  color: black;
+  font-weight: bold;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in;
+  /* Ensures visibility */
+}
+
+#job-Detail-btn-hover.active {
+  color: black;
+  font-weight: bold;
+  /* Change text color for active button */
+}
+
+#job-Detail-btn-hover {
+
+  /* Change text color for active button */
+}
+
+#job-Detail-btn-hover.active::before {
+  width: 100%;
+}
+
+#job-Detail-btn-hover:hover::before {
+  width: 100%;
+  color: black;
+  font-weight: bold;
+}
