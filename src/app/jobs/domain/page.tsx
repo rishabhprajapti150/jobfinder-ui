@@ -43,8 +43,8 @@ export function DomaimComponet() {
     };
     return (
         <>
-            <div className="bg-white mt-5 mb-6 p-4">
-                <div className="flex items-center justify-center gap-5">
+            <div className="bg-white mt-7 mb-6 p-4">
+                <div className="flex flex-wrap items-center justify-center gap-5">
                     {jobCategories.map((jobCategorie) => (
                         <button
                             key={jobCategorie}

@@ -17,7 +17,7 @@ const JobList: React.FC<JobListProps> = ({
         <div className="flex items-baseline mb-4 gap-4">
             {/* Previous Button */}
             <div
-                className="bg-white shadow-lg rounded-full p-3 mx-3 translate-y-24 cursor-pointer"
+                className="hidden bg-white shadow-lg rounded-full p-3 mx-3 translate-y-24 cursor-pointer md:block lg:block"
                 onClick={handlePrevious}
                 style={{ visibility: currentWindowStart === 0 ? 'hidden' : 'visible' }}
             >
@@ -128,7 +128,7 @@ const JobList: React.FC<JobListProps> = ({
 
             {/* Next Button */}
             <div
-                className="bg-white shadow-lg rounded-full p-3 mx-3 translate-y-24 cursor-pointer"
+                className="hidden bg-white shadow-lg rounded-full p-3 mx-3 translate-y-24 cursor-pointer md:block lg:block"
                 id="next-remote-job"
                 onClick={handleNext}
                 style={{

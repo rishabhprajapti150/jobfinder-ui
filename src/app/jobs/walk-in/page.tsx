@@ -148,7 +148,7 @@ export default function WalkInJOb() {
     // );
     return (
         <>
-            <div className="bg-white mt-8 mb-5">
+            <div className="bg-white mt-8 mb-5 p-4 md:p-0 lg:0">
                 <div className="flex items-center justify-center">
                     <h3 className="text-black text-2xl font-bold font-sans my-5" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         Walkin Jobs
