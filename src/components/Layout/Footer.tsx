@@ -4,19 +4,20 @@ import { LinkButton } from "../CommonComponents";
 
 const Footer = () => {
     return (
-        <div className="bg-[#e6f0ff] py-10 px-5 text-center">
+        <div className="bg-[#e6f0ff] py-10 px-5">
 
-            <div className="flex items-center justify-between flex-wrap gap-4">
-                <div className="max-w-[300px] flex flex-col items-baseline">
+            <div className="flex flex-col   justify-start lg:flex-row lg:justify-around lg:items-center  gap-4">
+                <div className="flex flex-col items-baseline">
                     <Image
                         src="/file.png"
                         width={100}
                         height={100}
                         alt="Picture of the author"
+                        className="mx-auto sm:mx-0"
                     />
-                    <p className="text-justify"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+                    <p className="max-w-md mx-auto text-justify leading-relaxed sm:max-w-xs sm:mx-0 sm:text-left"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
                         consequuntur amet culpa cum itaque neque.</p>
-                    <div className="flex space-x-4 mt-4">
+                    <div className="flex justify-center mx-auto sm:mx-0 space-x-4 mt-4">
                         <Link href="#" className="bg-[#145af3] p-2 rounded-full text-white">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M22 12.07c0-5.52-4.48-10-10-10S2 6.55 2 12.07c0 4.96 3.61 9.06 8.32 9.92v-7.03H7.5V12h2.82v-1.56c0-2.8 1.67-4.32 4.22-4.32 1.22 0 2.5.22 2.5.22v2.73h-1.41c-1.38 0-1.81.86-1.81 1.74V12h3.08l-.49 2.96h-2.59v7.03C18.39 21.13 22 17.03 22 12.07z" />
@@ -39,114 +40,75 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="flex flex-col items-baseline max-w-[300px]">
-                    <h4 className="text-[#145af3] text-lg font-semibold mb-4">Company</h4>
-                    <div className="flex flex-col gap-3 items-baseline">
-                        <LinkButton type="link" href={"#"}>About Us</LinkButton>
-                        <LinkButton type="link" href={"#"}>Contact Us</LinkButton>
-                        <LinkButton type="link" href={"#"}>Careers</LinkButton>
-                        <LinkButton type="link" href={"#"}>Compnay Details</LinkButton>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+
+                    <div className="text-center sm:text-left">
+                        <p className="text-[#145af3] text-lg font-semibold">Company</p>
+                        <nav className="mt-8">
+                            <ul className="space-y-4 text-sm">
+                                <li><LinkButton type="link" href="#">About Us</LinkButton></li>
+                                <li><LinkButton type="link" href="#">Contact Us</LinkButton></li>
+                                <li><LinkButton type="link" href="#">Careers</LinkButton></li>
+                                <li><LinkButton type="link" href="#">Company Details</LinkButton></li>
+                            </ul>
+                        </nav>
                     </div>
-                </div>
-                <div className="flex flex-col items-baseline max-w-[300px]">
-                    <h4 className="text-[#145af3] text-lg font-semibold mb-4">Job Seekers</h4>
-                    <div className="flex flex-col gap-3 items-baseline">
-                        <LinkButton type="link" href={"#"}>Browse Jobs</LinkButton>
-                        <LinkButton type="link" href={"#"}>Apply for Jobs</LinkButton>
-                        <LinkButton type="link" href={"#"}>View Details</LinkButton>
-                        <LinkButton type="link" href={"#"}>Resume Tips</LinkButton>
+
+                    <div className="text-center sm:text-left">
+                        <p className="text-[#145af3] text-lg font-semibold">Job Seekers</p>
+                        <nav className="mt-8">
+                            <ul className="space-y-4 text-sm">
+                                <li><LinkButton type="link" href="#">Browse Jobs</LinkButton></li>
+                                <li><LinkButton type="link" href="#">Apply for Jobs</LinkButton></li>
+                                <li><LinkButton type="link" href="#">View Details</LinkButton></li>
+                                <li><LinkButton type="link" href="#">Resume Tips</LinkButton></li>
+                            </ul>
+                        </nav>
                     </div>
-                </div>
-                <div className="flex flex-col items-baseline max-w-[300px]">
-                    <h4 className="text-[#145af3] text-lg font-semibold mb-4">Employers</h4>
-                    <div className="flex flex-col gap-3 items-baseline">
-                        <LinkButton type="link" href={"#"}>Post a Job</LinkButton>
-                        <LinkButton type="link" href={"#"}>Employer Login</LinkButton>
-                        <LinkButton type="link" href={"#"}>Hiring Guide</LinkButton>
-                        <LinkButton type="link" href={"#"}>View Jobs</LinkButton>
+
+                    <div className="text-center sm:text-left">
+                        <p className="text-[#145af3] text-lg font-semibold">Employers</p>
+                        <nav className="mt-8">
+                            <ul className="space-y-4 text-sm">
+                                <li><LinkButton type="link" href="#">Post a Job</LinkButton></li>
+                                <li><LinkButton type="link" href="#">Employer Login</LinkButton></li>
+                                <li><LinkButton type="link" href="#">Hiring Guide</LinkButton></li>
+                                <li><LinkButton type="link" href="#">View Jobs</LinkButton></li>
+                            </ul>
+                        </nav>
                     </div>
-                </div>
-                <div className="flex flex-col items-baseline max-w-[300px]">
-                    <h4 className="text-[#145af3] text-lg font-semibold mb-4 lg:mt-[-28px]">Contact Us</h4>
-                    <div className="flex flex-col items-baseline gap-3">
-                        <LinkButton
-                            className="flex items-center sm:justify-start gap-1.5 group"
-                            href="/"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-5 h-5 text-black shrink-0"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                />
-                            </svg>
 
-                            <span className="">
-                                john@doe.com
-                            </span>
-                        </LinkButton>
-
-
-
-                        <LinkButton
-                            className="flex items-center sm:justify-start gap-1.5 group"
-                            href="/"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-5 h-5 text-black shrink-0"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                />
-                            </svg>
-
-                            <span className="transition group-hover:text-white/75">
-                                0123456789
-                            </span>
-                        </LinkButton>
-
-
-                        <div
-                            className="flex items-start justify-center gap-1.5 sm:justify-start"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-5 h-5 text-black shrink-0"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                                />
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                />
-                            </svg>
-
-                            <address className="">
-                                213 Lane, London, United Kingdom
-                            </address>
-                        </div>
+                    <div className="text-center sm:text-left">
+                        <p className="text-[#145af3] text-lg font-semibold">Contact Us</p>
+                        <nav className="mt-8">
+                            <ul className="space-y-4 text-sm">
+                                <li>
+                                    <LinkButton type="link" href="mailto:john@doe.com" className="flex items-center justify-center sm:justify-start gap-1.5 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-black shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                        john@doe.com
+                                    </LinkButton>
+                                </li>
+                                <li>
+                                    <LinkButton type="link" href="tel:0123456789" className="flex items-center justify-center sm:justify-start gap-1.5 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-black shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        0123456789
+                                    </LinkButton>
+                                </li>
+                                <li>
+                                    <LinkButton type="link" href="#" className="flex items-center justify-center sm:justify-start gap-1.5 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-black shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                        213 Lane, London, United Kingdom
+                                    </LinkButton>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
