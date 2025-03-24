@@ -22,6 +22,8 @@ export function DomaimComponet() {
     const jobCategories: string[] = [...Object.values(JobCategory)];
     // Function to render component based on category
     const renderComponent = () => {
+        console.log(activeTab);
+
         switch (activeTab) {
             case JobCategory.IT:
                 return <ITComponent />;
