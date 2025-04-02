@@ -10,7 +10,6 @@ import { DomaimComponet } from "./jobs/domain/page";
 export default function Home() {
   return (
     <div className="">
-
       <div className="mt-[-10px]">
 
         <Slider />
