@@ -1,11 +1,11 @@
 "use client"
-import Slider from "./jobs/Home/Slider";
-import ExploreCategory from "./jobs/Home/Expore-Category";
-import BestJob from "./jobs/Home/Best-Job";
-import TopCompany from "./jobs/Home/Top-Company";
-import RemoteJob from "./jobs/remote/page";
-import WalkInJOb from "./jobs/walk-in/page";
-import { DomaimComponet } from "./jobs/domain/page";
+import Slider from "@/app/(job-seeker)/jobs/Home/Slider";
+import ExploreCategory from "@/app/(job-seeker)/jobs/Home/Expore-Category";
+import BestJob from "@/app/(job-seeker)/jobs/Home/Best-Job";
+import TopCompany from "@/app/(job-seeker)/jobs/Home/Top-Company";
+import RemoteJob from "@/app/(job-seeker)/jobs/remote/page";
+import WalkInJOb from "@/app/(job-seeker)/jobs/walk-in/page";
+import { DomaimComponet } from "@/app/(job-seeker)/jobs/domain/page";
 
 export default function Home() {
   return (

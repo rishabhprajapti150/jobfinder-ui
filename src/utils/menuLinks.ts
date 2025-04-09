@@ -10,17 +10,17 @@ export const mainMenuLinks: ILink[] = [
 ];
 
 export const dropdownMenuLinks: ILink[] = [
-    { path: "/page", name: "Search", label: "Search" },
+    { path: "/jobs/search", name: "Search", label: "Search" },
     // { path: "/page", name: "SearchByCategories", label: "Search By Categories" }
 ];
 
 export const furtherNestedCategoriesLinks: ILink[] = [
-    { path: "/page", name: "JobsInDelhi", label: "Jobs In Delhi" },
-    { path: "/page", name: "JobsInMumbai", label: "Jobs In Mumbai" },
-    { path: "/page", name: "JobsInBangalore", label: "Jobs In Bangalore" },
-    { path: "/page", name: "JobsInChennai", label: "Jobs In Chennai" },
-    { path: "/page", name: "JobsInPune", label: "Jobs In Pune" },
-    { path: "/page", name: "ViewAll", label: "View All" }
+    { path: "/job-search/jobs-in-delhi", name: "JobsInDelhi", label: "Jobs In Delhi" },
+    { path: "/job-search/jobs-in-mumbai", name: "JobsInMumbai", label: "Jobs In Mumbai" },
+    { path: "/job-search/jobs-in-banglore", name: "JobsInBangalore", label: "Jobs In Bangalore" },
+    { path: "/job-search/jobs-in-chennai", name: "JobsInChennai", label: "Jobs In Chennai" },
+    { path: "/job-search/jobs-in-pune", name: "JobsInPune", label: "Jobs In Pune" },
+    { path: "/job-search/location", name: "ViewAll", label: "View All" }
 ];
 
 export const searchByCategoriesLinks: ILink[] = [

@@ -1,3 +1,4 @@
+"use client"
 import { LinkButton } from "@/components/CommonComponents"
 import Image from "next/image"
 import '@/styles/style.css'
