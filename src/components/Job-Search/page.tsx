@@ -1,6 +1,8 @@
+
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import { LinkButton } from '../CommonComponents';
+import { MapPinIcon, BriefcaseIcon, UsersIcon } from '@heroicons/react/24/outline';
 // import '@/styles/style.css'
 
 // Types
@@ -73,42 +75,54 @@ type PaginationControlsProps = {
 // Sub-components
 const JobCard: React.FC<JobCardProps> = ({ job, onClick, onApply }) => (
   <div
-    className="bg-white shadow-xl py-6 px-5 mb-10 cursor-pointer"
+    className="bg-white rounded-xl border-2 border-blue-600 hover:shadow-2xl transition cursor-pointer p-6 mb-8"
     onClick={onClick}
     style={{
-      boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px',
+      boxShadow:
+        'rgba(50, 50, 93, 0.1) 0px 4px 12px, rgba(0, 0, 0, 0.05) 0px 2px 6px',
     }}
   >
-    <div className="flex items-center justify-between py-2">
-      <p className="bg-[#d3d3d38c] px-2 py-1">{job.type}</p>
-      <p className="text-sm text-black">{job.posted}</p>
+    {/* Top Bar */}
+    <div className="flex items-center justify-between mb-2">
+      <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">{job.type}</span>
+      <span className="text-xs text-gray-500">{job.posted}</span>
     </div>
-    <h3 className="font-bold text-lg py-1">{job.title}</h3>
-    <h3 className="text-sm py-1">{job.company}</h3>
-    <div className="flex items-center gap-1 py-2">
-      <LocationIcon />
-      <p className="text-sm text-black">{job.location}</p>
+
+    {/* Title & Company */}
+    <h3 className="text-xl font-bold text-blue-600 mb-1">{job.title}</h3>
+    <p className="text-sm text-gray-700 mb-3">{job.company}</p>
+
+    {/* Location */}
+    <div className="flex items-center text-sm text-gray-600 mb-2">
+      <MapPinIcon className="w-4 h-4 mr-1 text-blue-500" />
+      {job.location}
     </div>
-    <div className="flex flex-row gap-4 py-1">
-      <div className="flex items-center gap-1">
-        <ExperienceIcon />
-        <p className="text-sm text-black">{job.experience}</p>
+
+    {/* Experience & Positions */}
+    <div className="flex gap-6 text-sm text-gray-600 mb-3">
+      <div className="flex items-center">
+        <BriefcaseIcon className="w-4 h-4 mr-1 text-blue-500" />
+        {job.experience}
       </div>
-      <div className="flex items-center gap-1">
-        <PositionsIcon />
-        <p className="text-sm text-black">{job.positions}</p>
+      <div className="flex items-center">
+        <UsersIcon className="w-4 h-4 mr-1 text-blue-500" />
+        {job.positions}
       </div>
     </div>
-    <p className="text-sm text-black py-2">Be an Early Applicant</p>
-    <p 
-      className="text-sm font-bold text-[#145af3] py-2 cursor-pointer text-right" 
-      onClick={(e) => {
-        e.stopPropagation();
-        onApply(job);
-      }}
-    >
-      Apply
-    </p>
+
+    {/* Footer */}
+    <div className="flex items-center justify-between mt-4">
+      <p className="text-sm text-gray-400 italic">Be an early applicant</p>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          onApply(job);
+        }}
+        className="text-blue-600 font-semibold hover:text-blue-800 transition text-sm"
+      >
+        Apply →
+      </button>
+    </div>
   </div>
 );
 

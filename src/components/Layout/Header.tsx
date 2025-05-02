@@ -14,13 +14,16 @@ function Header() {
     return (
         <>
             <div className="flex items-center justify-between bg-white rounded hidden sm:flex md:flex lg:flex">
-                <div>
+                {/* Logo */}
+                <div className="flex items-center space-x-2">
                     <Image
                         src="/file.png"
-                        width={100}
-                        height={100}
-                        alt="Picture of the author"
+                        width={70}
+                        height={70}
+                        alt="Logo"
+                        className="rounded"
                     />
+                    <span className="text-[#145af3] text-2xl font-bold">JOB</span>
                 </div>
                 <div className=" flex items-center  flex-row mx-10">
                     <div key={'home'} className="p-4 ">
