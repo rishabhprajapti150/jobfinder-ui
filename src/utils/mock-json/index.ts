@@ -606,3 +606,132 @@ interface RecruiterDetails {
   ];
   
   export default specificJobDetails;
+
+
+
+  export const JobFilterCategoryValue = {
+    'work mode': {
+      label: 'Work Mode',
+      name:'work mode',
+      options: [
+        { value: 'remote', label: 'Remote', count: 124 },
+        { value: 'hybrid', label: 'Hybrid', count: 87 },
+        { value: 'onsite', label: 'On-site', count: 215 }
+      ]
+    },
+    'experience': {
+      label: 'Experience Level',
+      name:'experience',
+      options: [
+        { value: 'intern', label: 'Internship', count: 56 },
+        { value: 'entry', label: 'Entry Level (0-2 yrs)', count: 156 },
+        { value: 'mid', label: 'Mid Level (3-5 yrs)', count: 203 },
+        { value: 'senior', label: 'Senior (5+ yrs)', count: 178 },
+        { value: 'lead', label: 'Lead/Manager', count: 92 }
+      ]
+    },
+    'department': {
+      label: 'Department',
+      name:'department',
+      options: [
+        { value: 'engineering', label: 'Engineering', count: 342 },
+        { value: 'product', label: 'Product', count: 87 },
+        { value: 'design', label: 'Design', count: 65 },
+        { value: 'marketing', label: 'Marketing', count: 112 },
+        { value: 'sales', label: 'Sales', count: 94 },
+        { value: 'hr', label: 'Human Resources', count: 58 }
+      ]
+    },
+    'salary': {
+      label: 'Salary Range',
+      name:'salary',
+      options: [
+        { value: '0-50k', label: 'Under $50k', count: 76 },
+        { value: '50-100k', label: '$50k - $100k', count: 213 },
+        { value: '100-150k', label: '$100k - $150k', count: 187 },
+        { value: '150k+', label: '$150k+', count: 124 }
+      ]
+    },
+    'company type': {
+      label: 'Company Type',
+      name:'company type',
+      options: [
+        { value: 'startup', label: 'Startup', count: 156 },
+        { value: 'midsize', label: 'Midsize Company', count: 132 },
+        { value: 'enterprise', label: 'Enterprise', count: 198 },
+        { value: 'nonprofit', label: 'Non-Profit', count: 45 }
+      ]
+    },
+    'role category': {
+      label: 'Role Category',
+      name:'role category',
+      options: [
+        { value: 'development', label: 'Software Development', count: 276 },
+        { value: 'devops', label: 'DevOps/Cloud', count: 87 },
+        { value: 'data', label: 'Data Science/Analytics', count: 112 },
+        { value: 'qa', label: 'Quality Assurance', count: 65 },
+        { value: 'ux', label: 'UX/UI Design', count: 78 }
+      ]
+    },
+    'education': {
+      label: 'Education',
+      name:'education',
+      options: [
+        { value: 'highschool', label: 'High School Diploma', count: 87 },
+        { value: 'bachelors', label: "Bachelor's Degree", count: 324 },
+        { value: 'masters', label: "Master's Degree", count: 156 },
+        { value: 'phd', label: 'PhD', count: 42 },
+        { value: 'none', label: 'No Degree Required', count: 91 }
+      ]
+    },
+    'posted by': {
+      label: 'Posted By',
+      name:'posted by',
+      options: [
+        { value: 'recruiter', label: 'Recruiter', count: 187 },
+        { value: 'hiring-manager', label: 'Hiring Manager', count: 132 },
+        { value: 'agency', label: 'Staffing Agency', count: 76 }
+      ]
+    },
+    'industry': {
+      label: 'Industry',
+      name:'industry',
+      options: [
+        { value: 'tech', label: 'Technology', count: 298 },
+        { value: 'finance', label: 'Finance/Banking', count: 112 },
+        { value: 'healthcare', label: 'Healthcare', count: 87 },
+        { value: 'education', label: 'Education', count: 65 },
+        { value: 'retail', label: 'Retail/E-commerce', count: 93 }
+      ]
+    },
+    'top companies': {
+      label: 'Top Companies',
+      name:'top companies',
+      options: [
+        { value: 'faang', label: 'FAANG Companies', count: 76 },
+        { value: 'fortune500', label: 'Fortune 500', count: 143 },
+        { value: 'unicorn', label: 'Unicorn Startups', count: 87 },
+        { value: 'remote-first', label: 'Remote-First Companies', count: 112 }
+      ]
+    },
+    'freshness': {
+      label: 'Job Freshness',
+      name:'freshness',
+      options: [
+        { value: '1day', label: 'Last 24 Hours', count: 42 },
+        { value: '3days', label: 'Last 3 Days', count: 87 },
+        { value: '1week', label: 'Last Week', count: 156 },
+        { value: '1month', label: 'Last Month', count: 324 }
+      ]
+    },
+    'location': {
+      label: 'Location',
+      name:'location',
+      options: [
+        { value: 'us', label: 'United States', count: 432 },
+        { value: 'europe', label: 'Europe', count: 187 },
+        { value: 'asia', label: 'Asia', count: 156 },
+        { value: 'remote-global', label: 'Remote (Anywhere)', count: 225 }
+      ]
+    }
+  };

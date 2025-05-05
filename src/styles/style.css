@@ -435,3 +435,14 @@
   background-color: #0f4ac9; /* darker on hover */
 }
 /* close job  */
+
+
+/* filter by job design */
+#filterByJob{
+ background-color: #0f4ac9;
+ /* position: absolute;
+ left: 0; */
+
+
+}
+/* close filter by job */

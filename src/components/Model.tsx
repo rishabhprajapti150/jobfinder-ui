@@ -1,6 +1,7 @@
 // components/Modal.tsx
 import React from 'react';
 import { XMarkIcon } from '@heroicons/react/24/solid';
+import '@/styles/style.css'
 
 interface ModalProps {
   isOpen: boolean;
@@ -36,7 +37,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         
 
           {/* Custom content */}
-          <div className="mt-4">
+          <div className="mt-4 overflow-y-auto scrollbar-custom h-[550px]">
             {children}
           </div>
         </div>
