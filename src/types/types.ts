@@ -42,3 +42,13 @@ export interface ViewJobDetail {
     };
     benefits: string[];
 }
+
+export enum JobCategory {
+    IT = "IT",
+    Sales = "Sales",
+    Finance = "Finance",
+    Marketing = "Marketing",
+    Telesales = "Telesales",
+    HR = "HR",
+    Others = "Others",
+}

@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { JobCategory } from "@/types/types";
 const ITComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/it/page'), { loading: () => <p>Loading...</p> });
 const SalesComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/sales/page'), { loading: () => <p>Loading...</p> });
 const FinanceComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/finance/page'), { loading: () => <p>Loading...</p> });
@@ -8,16 +9,8 @@ const MarketingComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/
 const TelesalesComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/telesales/page'), { loading: () => <p>Loading...</p> });
 const HRComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/hr/page'), { loading: () => <p>Loading...</p> });
 const OthersComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/others/page'), { loading: () => <p>Loading...</p> });
-enum JobCategory {
-    IT = "IT",
-    Sales = "Sales",
-    Finance = "Finance",
-    Marketing = "Marketing",
-    Telesales = "Telesales",
-    HR = "HR",
-    Others = "Others",
-}
-export function DomaimComponet() {
+
+ function DomaimComponet() {
     const [activeTab, setActiveTab] = useState<string>(JobCategory.IT); // Default active tab
     const jobCategories: string[] = [...Object.values(JobCategory)];
     // Function to render component based on category
@@ -65,3 +58,4 @@ export function DomaimComponet() {
         </>
     )
 }
+export default DomaimComponet as any

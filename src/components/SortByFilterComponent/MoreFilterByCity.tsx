@@ -156,11 +156,11 @@ const CityComponmentFilter: React.FC<ReusableFilterProps> = ({
 
             {/* Filter Header */}
             <div className="bg-white pl-7 pr-7 pt-7 pb-1">
-                <div className="flex items-end justify-between">
-                    <div>
-                        <h2>{title}</h2>
+                <div className="flex flex-col items-center lg:flex-row gap-3">
+                    <div className='w-full'>
+                        <h2 className='w-full'>{title}</h2>
                     </div>
-                    <div className="flex flex-row items-center gap-5">
+                    <div className="flex flex-row flex-wrap items-center gap-5 w-full">
                         <div className="">Filter By</div>
 
                         <div className="bg-[#fff] border-[#ececec] shadow flex items-center justify-between px-4 py-3 cursor-pointer h-10"

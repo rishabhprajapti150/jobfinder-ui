@@ -5,6 +5,7 @@ import '@/styles/style.css'
 
 function Slider() {
     // const images = ['/jobLookingOne.jpg', '/jobLookingTwo.jpg', '/jobLookingThree.jpg']
+    
     return (
         <>
             <div className="relative">

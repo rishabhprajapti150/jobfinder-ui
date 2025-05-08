@@ -8,7 +8,7 @@ import Modal from "@/components/Model";
 import Radio from "@/components/Radio";
 // import CustomRadio from "@/components/Radio";
 import useToggle from "@/utils/hooks/useToggle";
-import specificJobDetails from "@/utils/mock-json";
+import specificJobDetails, { puneJobs } from "@/utils/mock-json";
 import React, { useState } from "react";
 import { JobFilterCategoryValue } from "@/utils/mock-json";
 import FilterByJobValueComponent from "@/components/SortByFilterComponent/FilterByJobValue";
@@ -27,9 +27,9 @@ export default function JobsInDelhi() {
       )}
     
       <JobSeachByLocationComponent
-        jobs={specificJobDetails as unknown as IJobSearchLists[]}
-        specificJobDetails={specificJobDetails as unknown as IJobSearchLists[]}
-        title="Jobs in Delhi"
+        jobs={puneJobs as unknown as IJobSearchLists[]}
+        specificJobDetails={puneJobs as unknown as IJobSearchLists[]}
+        title="Jobs in Pune"
         showPagination={true}
         jobsPerPage={3}
         handleApply={(jobDetails) => alert(`Applying for: ${jobDetails.title} at ${jobDetails.company}`)}

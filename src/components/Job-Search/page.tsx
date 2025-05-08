@@ -436,7 +436,7 @@ const JobSeachByLocationComponent: React.FC<JobsComponentProps> = ({
   return (
     <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row w-full">
       {/* Job Listings */}
-      <div className="flex flex-col m-5 w-1/3 h-[calc(2*220px)]">
+      <div className="flex flex-col m-5 w-10/12 md:w-1/2 lg:w-1/3 h-[calc(2*220px)]">
         <h2 className="text-xl font-bold mb-4">{title}</h2>
         <div className="overflow-y-auto scrollbar-custom">
           {currentJobs.map((job) => (
