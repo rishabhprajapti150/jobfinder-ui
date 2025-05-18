@@ -82,5 +82,5 @@ export const searchByCategoriesLinks: ILink[] = [
 
 export const otherLinks: ILink[] = [
     { path: "/page", name: "JobsAlerts", label: "Jobs Alerts" },
-    { path: "/page", name: "JobsSearch", label: "Jobs Search" }
+    { path: "/job-search", name: "JobsSearch", label: "Jobs Search" }
 ];
