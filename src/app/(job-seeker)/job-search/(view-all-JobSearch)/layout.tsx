@@ -102,7 +102,7 @@
 
 'use client';
 
-import Button from '@/components/Button';
+import Button from '@/components/ui/button';
 import { LinkButton } from '@/components/CommonComponents';
 import { ReactNode, useRef, useState } from 'react';
 

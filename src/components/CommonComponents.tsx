@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import { cn } from "@/utils";
+import { cn } from "@/lib/utils";
 import { ComponentProps } from "react";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import Button from "./Button";
+import Button from "@/components/ui/button";
 // import { useKeycloak } from "@/context/KeycloakContext";
 // import { ApiResponse, Course, CourseWithSemester, FrontEndExam, Subject, SubjectByFaculty, ValidationError } from "@/utils/types";
 // import { DASHBOARD_CREATE_EXAM_NEW } from "@/utils/constants";

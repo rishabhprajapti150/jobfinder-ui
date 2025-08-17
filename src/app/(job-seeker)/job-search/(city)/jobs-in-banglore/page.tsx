@@ -1,11 +1,11 @@
 "use client"
 
-import CustomCheckbox from "@/components/Checkbox";
-import Checkbox from "@/components/Checkbox";
-import Input from "@/components/Input/index";
+import CustomCheckbox from "@/components/ui/checkbox";
+import Checkbox from "@/components/ui/checkbox";
+import Input from "@/components/ui/input";
 import JobSeachByLocationComponent, { IJobSearchLists } from "@/components/Job-Search/page";
-import Modal from "@/components/Model";
-import Radio from "@/components/Radio";
+import Modal from "@/components/ui/model";
+import Radio from "@/components/ui/radio";
 // import CustomRadio from "@/components/Radio";
 import useToggle from "@/utils/hooks/useToggle";
 import specificJobDetails, { bangaloreJobs } from "@/utils/mock-json";

@@ -6,7 +6,7 @@ import { dropdownMenuLinks, mainMenuLinks, otherLinks, searchByCategoriesLinks }
 import dynamic from "next/dynamic"
 const Sidebar = dynamic(() => import('@/components/Layout/Sidebar'), { loading: () => <p>Loading...</p> })
 function Header() {
-    const isLogin = true
+    const isLogin = false
     const [hasLogin, setHasLogin] = React.useState<boolean>(false)
     const [isSideBar, setSidebar] = React.useState<boolean>(false)
 
@@ -149,8 +149,8 @@ function Header() {
                         </div>
                     ) : (
                         <div className="flex items-end mx-5 gap-5">
-                            <LinkButton type="button" className="py-3 px-4 bg-[#145af3] text-white hover:bg-[#2278f9] hover:transition-all hover:duration-200" key={'Login'}>Login</LinkButton>
-                            <LinkButton type="button" className="bg-white py-3 px-4 text-[#145af3] border border-[#145af3]" key={'Sign Up'}>Sign Up</LinkButton>
+                            <LinkButton href="/login" className="py-3 px-4 bg-[#145af3] text-white hover:bg-[#2278f9] hover:transition-all hover:duration-200 rounded" key={'Login'}>Login</LinkButton>
+                            <LinkButton href="/register" className="bg-white py-3 px-4 text-[#145af3] border border-[#145af3] rounded" key={'Sign Up'}>Sign Up</LinkButton>
                         </div>
                     )
                 }

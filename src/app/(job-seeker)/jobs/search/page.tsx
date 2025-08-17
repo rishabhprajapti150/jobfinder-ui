@@ -1,6 +1,6 @@
 "use client"
-import Button from "@/components/Button";
-import Input from "@/components/Input";
+import Button from "@/components/ui/button";
+import Input from "@/components/ui/input";
 import useToggle from "@/utils/hooks/useToggle";
 import { ChevronDownIcon, ChevronUpIcon, ListBulletIcon, MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 import { Formik, Form, Field, ErrorMessage } from 'formik';

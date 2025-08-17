@@ -1,5 +1,5 @@
 import React from "react";
-import CustomCheckbox from "../Checkbox";
+import CustomCheckbox from "@/components/ui/checkbox";
 
 export type JobFilterCategory = {
   label: string;

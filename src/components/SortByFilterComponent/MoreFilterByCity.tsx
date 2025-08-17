@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 // import FilterByJobValueComponent from './FilterByJobValueComponent'; // Your filter value component
 import { JobFilterCategoryValue } from '@/utils/mock-json';
 import FilterByJobValueComponent from './FilterByJobValue';
-import Modal from '../Model';
-import Radio from '../Radio';
+import Modal from '@/components/ui/model';
+import Radio from '@/components/ui/radio';
 import useToggle from '@/utils/hooks/useToggle';
 
 interface FilterOption {

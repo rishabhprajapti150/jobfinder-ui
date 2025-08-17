@@ -4,10 +4,10 @@ import Image from "next/image"
 import '@/styles/style.css'
 import Link from "next/link"
 // import { Search, MapPin } from 'lucide-react';
-import  Button  from '@/components/Button/index';
-import { CV2Input } from '@/components/Input/CV2Input'
+import  Button  from '@/components/ui/button';
+import { CV2Input } from '@/components/ui/CV2Input'
 import { MagnifyingGlassIcon, MapPinIcon } from '@heroicons/react/24/outline';
-import { CButton } from "@/components/Button/CButton"
+import  CButton  from "@/components/ui/button"
 
 function Slider() {
     // const images = ['/jobLookingOne.jpg', '/jobLookingTwo.jpg', '/jobLookingThree.jpg']
@@ -69,7 +69,7 @@ function Slider() {
                             {/* Search Button */}
                             <div className="px-1 py-2 sm:p-0 sm:pl-2">
                                 <CButton
-                                    size="lg"
+                                    // size="lg"
                                     className="w-full text-white sm:w-auto bg-blue-500 hover:bg-blue-600"
                                 >
                                     Search Jobs

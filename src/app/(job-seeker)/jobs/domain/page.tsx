@@ -3,7 +3,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import { JobCategory } from "@/types/types";
 import { MagnifyingGlassIcon, BriefcaseIcon, UserGroupIcon, BellIcon } from '@heroicons/react/24/outline';
-import { CButton } from "@/components/Button/CButton";
+import  CButton  from "@/components/ui/button";
 const ITComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/it/page'), { loading: () => <p>Loading...</p> });
 const SalesComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/sales/page'), { loading: () => <p>Loading...</p> });
 const FinanceComponent = dynamic(() => import('@/app/(job-seeker)/jobs/domain/finance/page'), { loading: () => <p>Loading...</p> });
@@ -111,14 +111,14 @@ function DomaimComponet() {
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                         <CButton
-                            size="lg"
+                            // size="lg"
                             className="bg-white text-blue-600 hover:bg-gray-100"
                         >
                             Create an Account
                         </CButton>
                         <CButton
-                            variant="outline"
-                            size="lg"
+                            // variant="outline"
+                            // size="lg"
                             className="border-white text-blue-500 hover:bg-blue-700"
                         >
                             Learn More
