@@ -2,6 +2,7 @@
 "use client"
 import React from "react";
 import '@/styles/style.css'
+import Link from "next/link";
 
 interface Category {
     name: string;
@@ -9,7 +10,7 @@ interface Category {
     icon: React.ReactNode;
 }
 
-const categories: Category[] = [
+const categories1: Category[] = [
     {
         name: "Marketing",
         vacancies: 123,
@@ -97,12 +98,21 @@ const categories: Category[] = [
     },
 ];
 
-
+const categories = [
+  { name: 'Technology', count: 1420, icon: '💻' },
+  { name: 'Design', count: 856, icon: '🎨' },
+  { name: 'Marketing', count: 643, icon: '📊' },
+  { name: 'Finance', count: 532, icon: '💰' },
+  { name: 'Healthcare', count: 431, icon: '⚕️' },
+  { name: 'Education', count: 327, icon: '🎓' },
+  { name: 'Customer Service', count: 295, icon: '🤝' },
+  { name: 'Sales', count: 264, icon: '📈' }
+];
 const ExploreCategory: React.FC = () => {
     return (
 
         <>
-            <div className="flex items-center justify-center m-10">
+            {/* <div className="flex items-center justify-center m-10">
                 <h2 className="text-4xl font-bold text-gray-900 font-sans">
                     Explore By Category
                 </h2>
@@ -119,9 +129,36 @@ const ExploreCategory: React.FC = () => {
                         <p className="capitalize text-[#145af3] py-1">{category.vacancies} Vacancies</p>
                     </div>
                 ))}
-            </div>
+            </div> */}
+            {/* Browse by Category */}
+      <section className="section-padding bg-white m-10">
+        <div className="container mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mt-4 mb-3">Browse by Category</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Explore job opportunities in your field of interest
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {categories.map((category) => (
+              <Link 
+                key={category.name} 
+                href={`/jobs/category/${category.name.toLowerCase()}`} 
+                className="flex flex-col items-center p-6 bg-white rounded-lg border border-gray-200 hover:border-jobblue-300 hover:shadow-md transition-all"
+              >
+                <span className="text-3xl mb-3">{category.icon}</span>
+                <h3 className="text-lg font-medium text-gray-900">{category.name}</h3>
+                <p className="text-sm text-gray-500">{category.count} jobs</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
         </>
     );
 };
 
 export default ExploreCategory;
+
+
