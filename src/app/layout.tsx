@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css"
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
+import StoreProvider from "@/lib/redux/StoreProvider";
+import { usePathname } from "next/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,24 +27,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isAdmin = pathname.startsWith("/admin");
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
       >
-        {/* Sticky Header */}
-        <div className="sticky top-0 z-50 shadow-md">
-          <Header />
-        </div>
+        <StoreProvider>
+          {/* Sticky Header */}
+          {!isAdmin &&
+          <div className="sticky top-0 z-50 shadow-md">
+            <Header />
+          </div>
+}
 
-        {/* Main Content */}
+          {/* Main Content */}
 
-        <main className="overflow-hidden">
-          {children}
-        </main>
+          <main className="overflow-hidden">
+            {children}
+            {/* <StoreProvider>{children}</StoreProvider> */}
+          </main>
+ {!isAdmin && 
+         
+          <Footer />
+ }
+        </StoreProvider>
 
-        {/* Footer */}
-        <Footer />
       </body>
     </html>
   );

@@ -9,10 +9,11 @@ import { Mail, Lock, ArrowRight, Loader2 } from 'lucide-react'
 import * as Yup from 'yup';
 import { useState } from "react";
 import { LinkButton } from "@/components/CommonComponents";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
-    const [role, setRole] = useState("jobseeker"); // default role
-
+    const [role, setRole] = useState("employer"); // default role
+    const router=useRouter()
     const SignupSchema = Yup.object().shape({
         password: Yup.string()
             .min(2, 'Too Short!')
@@ -64,8 +65,12 @@ export default function Login() {
                             validationSchema={SignupSchema}
                             onSubmit={values => {
                                 console.log({ ...values, role });
+                               // alert()
                                 // redirect based on role here:
-                                // if(role === "jobseeker") router.push("/jobseeker/dashboard")
+                                if(role === "employer") {
+                                    // router.push("home")
+                                    router.replace("/home")
+                                }
                             }}
                         >
                             {({ handleChange, handleBlur, isSubmitting }) => (
